@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.blink{
+    animation: blinker 1.5s linear infinite;
+}
+@keyframes blinker{
+    50% {
+        opacity: 0;
+    }
+}
+
+
+body{
+    background-color: rgb(8, 161, 238);
+}
+
+
+
+/* NAVBAR */
+.navbar-list{
+    background: rgb(4, 186, 236);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 17px 0;
+}
+
+.navbar-item{
+    margin: 0 20px;
+    list-style-type: none;
+}
+
+.toggle{
+    list-style-type: none;
+    display: none;
+    margin: 0 20px;
+}
+
+.navbar-link{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-link:hover{
+    color: yellow;
+}
+
+.logo{
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    list-style-type: none;
+    margin-right: auto;
+    margin-left: 50px;
+}
+
+.logo a{
+    text-decoration: none;
+}
+
+.navbar-button{
+    font-size: 1em;
+    background: rgb(8, 161, 238);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+}
+
+.navbar-button:hover{
+    background-color: red;
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar-list{
+        flex-wrap: wrap;
+    }
+
+    .toggle{
+        display: block;
+    }
+    .navbar-item{
+        display: none;
+        text-align: right;
+        margin: 20px;
+        margin-right: 50px;
+        width: 100%;
+    }
+
+    .navbar-button{
+        display: flex;
+        width: 25%;
+        justify-content: center;
+        margin-left: auto;
+    }
+
+    .active{
+        display: block;
+    }
+}
+
+@media  screen and (max-width: 320px) {
+    .logo{
+        font-size: 1.5em;
+    }
+}
+
+/* TITLE */
+.title{
+    padding: 50px 50px;
+}
+
+.title-container{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.character{
+    flex: 1;
+    text-align: center;
+    margin: auto;
+}
+
+.character-img{
+    width: 500px;
+    border-radius: 3%;
+}
+
+.big-heading{
+    flex: 1;
+    margin-left: 30px;
+    margin: auto;
+}
+
+.big-heading h1{
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.big-heading p {
+font-size: 1.5em;
+margin-bottom: 80px;
+}
+
+.explore-button{
+    background-color: red;
+    border: none;
+    border-radius: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 20px;
+    padding: 20px 50px;
+}
+
+.explore-button a{
+    text-decoration: none;
+    color: white;
+}
+
+.explore-button:hover{
+    background: yellowgreen;
+}
+
+@media screen and (max-width: 1024px) {
+    .big-heading{
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .title-container{
+     flex-direction: column;
+    }
+
+    .big-heading{
+        margin: 0;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .character{
+        margin: 40px;
+    }
+
+    .character-img{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+.character{
+    display: flex;
+    margin: auto;
+}
+
+    .character-img{
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .character{
+        margin-top: 10px;
+    }
+
+    .character-img{
+        width: 200px;
+    }
+
+    .big-heading h1{
+        font-size: 1.9em;
+    }
+
+    .big-heading p{
+        font-size: 1em;
+    }
+
+    .explore-button{
+        padding: 10px 20px;
+        font-size: small;
+    }
+}
+
+/* COLLECTION */
+.collection{
+    margin-top: 25px;
+    background-color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.collection h2 {
+    color: yellowgreen;
+    font-size: 4em;
+    margin-bottom: 30px;
+}
+
+.collection-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.collection-card{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+.collection-card:hover{
+    box-shadow: 0 0 15px gray;
+}
+
+.image-box{
+    width: 310px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.image-box img{
+    height: 100%;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.image-box:hover img{
+    transform: scale(1.2);
+}
+
+.collection-card h3{
+    color: blue;
+    font-weight: bold;
+    margin: 5px 0 10px 0;
+    text-align: center;
+}
+
+.Position{
+    color: blue;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.tipe{
+    color: red;
+    font-weight: bold;
+    font-size: larger;
+    margin: 10px 10px 0;
+    text-align: center;
+}
+
+.card-button{
+    background: yellowgreen;
+    padding: 15px 80px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 10px 20px 20px;
+    border: 0;
+}
+
+.card-button:hover{
+    background: rgb(2, 2, 247);
+    box-shadow: 0 0 15px gray;
+}
+
+@media screen and (max-width: 425px) {
+    .collection-card{
+        width: 59%;
+    }
+
+    .image-box{
+        width: 100%;
+        height: 250px;
+    }
+
+    .card-button{
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .collection-card{
+        width: 80%;
+    }
+
+    .image-box{
+        width: 100%;
+        height: 220px;
+    }
+
+    .card-button{
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .collection-card{
+        width: 80%;
+    }
+
+    .image-box{
+        width: 100%;
+        height: 210px;
+    }
+
+    .card-button{
+        padding: 8px 15px;
+    }
+}
+
+aside{
+    background: white;
+    justify-content: center;
+    display: flex;
+}
+
+.biography-card{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px gray;
+}
+
+.biography-card:hover{
+    box-shadow: 0 0 15px gray;
+}
+
+.profile-img{
+    border-radius: 10px 10px 0 0 ;
+}
+
+.biography-card h3{
+    color: rgb(240, 6, 6);
+    font-weight: bold;
+    margin: 5px 0 10px;
+}
+
+.contact {
+    margin: 20px 10px;
+}
+
+.sosial-media{
+    padding: 0 5px;
+}
+
+/* footer */
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(8, 215, 242);
+}
